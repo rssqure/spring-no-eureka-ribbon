@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: ribbon-service
+
+server:
+  port: 8084
+
+providerservice:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8081, localhost:8085
+    MaxAutoRetries: 2
+    ReadTimeout: 5000
+    ServerListRefreshInterval: 1000
